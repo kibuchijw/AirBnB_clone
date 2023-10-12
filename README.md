@@ -5,6 +5,7 @@
 | 0. README, AUTHORS | [README.md](./README.md) [AUTHORS](./AUTHORS) |
 | 1. Be pycodestyle compliant! | [AirBnB_clone](./AirBnB_clone) |
 | 2. Unittests | [tests/](./tests/) |
+| 6. Console 0.0.1 | [console.py](./console.py) |
 
 ## Tasks
 ### 0. README, AUTHORS
@@ -20,4 +21,11 @@
 * All the code should pass pycodestyle checks
 ### 2. Unittests
 * All files, calsses, functions must be tested with unit tests
-
+### 6. Console 0.0.1
+* Program called `console.py` that contains the entry point of the command interpreter
+* Command intepreter implements:
+	* `quit` and `EOF` to exit the program
+	* `help` (provided by default by `cmd`), to be updated and documents throughout the tasks
+	* Custom prompt: `(hbnb)`
+	* Empty line + `ENTER` shouldn't execute anything
+* Code shouldn't be executed when imported
