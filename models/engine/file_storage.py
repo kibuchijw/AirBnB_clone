@@ -11,6 +11,8 @@ class FileStorage:
 
     __file_path = "file.json"
     __objects = {}
+    # Add a classes dictionary to store valid class names
+    classes = {}
 
     def all(self):
         """Method that returns __object dictionary"""
@@ -46,5 +48,7 @@ class FileStorage:
                         class_name, obj_id = key.split('.')
                         obj = BaseModel(**value)
                         FileStorage.__objects[key] = obj
+                        # Update classes dictionary with valid class names
+                        FileStorage.classes[class_name] = BaseModel
             except FileNotFoundError:
                 pass
