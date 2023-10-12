@@ -66,9 +66,9 @@ class HBNBCommand(cmd.Cmd):
             return
         try:
             class_name = args[0]
-            show BaseModel
-            print("** instance id missing **")
-            return
+            if len(args) < 2:
+                print("** instance id missing **")
+                return
             instance_id = args[1]
             all_instances = storage.all()
             key = class_name + "." + instance_id
