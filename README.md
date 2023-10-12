@@ -2,7 +2,7 @@
 
 | Task | File |
 | ---- | ---- |
-| 0. README, AUTHORS | [README.md, AUTHORS](./README.md, ./AUTHORS) |
+| 0. README, AUTHORS | [README.md AUTHORS](./README.md ./AUTHORS) |
 | 1. Be pycodestyle compliant! | [AirBnB_clone](./AirBnB_clone) |
 | 2. Unittests | [tests/](./tests/) |
 
