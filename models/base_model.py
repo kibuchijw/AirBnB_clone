@@ -7,7 +7,6 @@ from datetime import datetime
 from models import storage
 
 
-
 class BaseModel:
     """
     A base class that other classes will inherit from
@@ -36,7 +35,6 @@ class BaseModel:
             self.created_at = datetime.now()
             self.updated_at = datetime.now()
             storage.new(self)
-
 
     def __str__(self):
         """Method that returns human-readable string

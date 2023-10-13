@@ -11,13 +11,10 @@ class FileStorage:
 
     __file_path = "file.json"
     __objects = {}
-    # Add a classes dictionary to store valid class names
-    classes = {}
 
     def all(self):
         """Method that returns __object dictionary"""
         return FileStorage.__objects
-
 
     def new(self, obj):
         """Method that adds new objects to the __objects dictionary
@@ -35,6 +32,25 @@ class FileStorage:
         with open(FileStorage.__file_path, "w", encoding="utf-8") as f:
             json.dump(data, f)
 
+    def classes(self):
+        """Methd that Returns a dictionary of valid classes and their
+        appropriate references."""
+        from models.base_model import BaseModel
+        from models.user import User
+        from models.state import State
+        from models.city import City
+        from models.amenity import Amenity
+        from models.place import Place
+        from models.review import Review
+
+        classes = {"BaseModel": BaseModel,
+                   "User": User,
+                   "State": State,
+                   "City": City,
+                   "Amenity": Amenity,
+                   "Place": Place,
+                   "Review": Review}
+        return classes
 
     def reload(self):
         """Method that deserializes data from JSON file, reconstructs objects
@@ -43,7 +59,6 @@ class FileStorage:
             try:
                 with open(FileStorage.__file_path, "r", encoding="utf-8") as f:
                     data = json.load(f)
-                    from models.base_model import BaseModel
                     for key, value in data.items():
                         class_name, obj_id = key.split('.')
                         obj = BaseModel(**value)
