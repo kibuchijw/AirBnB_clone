@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """A module for the class Filestorage """
 
+import datetime
 import json
 import os
 
@@ -58,12 +59,10 @@ class FileStorage:
         if os.path.isfile(FileStorage.__file_path):
             try:
                 with open(FileStorage.__file_path, "r", encoding="utf-8") as f:
-                    data = json.load(f)
-                    for key, value in data.items():
-                        class_name, obj_id = key.split('.')
-                        obj = BaseModel(**value)
-                        FileStorage.__objects[key] = obj
-                        # Update classes dictionary with valid class names
-                        FileStorage.classes[class_name] = BaseModel
+                    obj_dict = json.load(f)
+                    obj_dict = {k: self.classes()[v["__class__"]](**v)
+                                for k, v in obj_dict.items()}
+                    FileStorage.__objects = obj_dict
+
             except FileNotFoundError:
                 pass

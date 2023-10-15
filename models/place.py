@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """module containing a class of a place"""
 
-from base_model import BaseModel
+from models.base_model import BaseModel
 
 
 class Place(BaseModel):
