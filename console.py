@@ -10,6 +10,7 @@ from models.amenity import Amenity
 from models.place import Place
 from models.review import Review
 
+
 class HBNBCommand(cmd.Cmd):
     prompt = '(hbnb) '
 
@@ -95,7 +96,8 @@ class HBNBCommand(cmd.Cmd):
     def default(self, line):
         """
         Called on an input line when the command prefix is not recognized.
-        This allows us to handle commands like User.all() or User.count() dynamically.
+        This allows us to handle commands like
+        User.all() or User.count() dynamically.
         """
         parts = line.split(".")
         if len(parts) == 2:
@@ -176,6 +178,7 @@ class HBNBCommand(cmd.Cmd):
         instance = all_instances[key]
         setattr(instance, attribute_name, attribute_value)
         instance.save()
+
 
 if __name__ == '__main__':
     HBNBCommand().cmdloop()
