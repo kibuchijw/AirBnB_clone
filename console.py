@@ -95,7 +95,7 @@ class HBNBCommand(cmd.Cmd):
     def default(self, line):
         """
         Called on an input line when the command prefix is not recognized.
-        This allows us to handle commands like User.all() dynamically.
+        This allows us to handle commands like User.all() or User.count() dynamically.
         """
         parts = line.split(".")
         if len(parts) == 2:
@@ -104,8 +104,21 @@ class HBNBCommand(cmd.Cmd):
             if class_name in storage.classes():
                 if method_name == "all()":
                     self.do_all(class_name)
-                    return
-        print("*** Unknown syntax: " + line)
+                elif method_name == "count()":
+                    self.do_count(class_name)
+                else:
+                    print("*** Unknown syntax: " + line)
+            else:
+                print("*** Unknown syntax: " + line)
+        else:
+            print("*** Unknown syntax: " + line)
+
+    def do_count(self, class_name):
+        """Count instances of a specific class"""
+        all_instances = storage.all()
+        count = sum(1 for key in all_instances if key.startswith(class_name + "."))
+        print(count)
+
     def do_all(self, arg):
         """Print all instances or all instances of a specific class"""
         args = arg.split()
