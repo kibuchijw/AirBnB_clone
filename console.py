@@ -92,24 +92,34 @@ class HBNBCommand(cmd.Cmd):
         else:
             print("** no instance found **")
 
-    def do_all(self, arg):
-        """Print all instances or all instances of a specific class"""
-        args = arg.split()
+    def default(self, line):
+        """
+        Called on an input line when the command prefix is not recognized.
+        This allows us to handle commands like User.all() dynamically.
+        """
+        parts = line.split(".")
+        if len(parts) == 2:
+            class_name = parts[0]
+            method_name = parts[1]
+            if class_name in storage.classes():
+                if method_name == "all()":
+                    self.do_all(class_name)
+                    return
+        print("*** Unknown syntax: " + line)
+
+    def do_all(self, class_name):
+        """
+        Print all instances of a specific class
+        Usage: all <class name>
+        """
         all_instances = storage.all()
+        if class_name not in storage.classes():
+            print("** class doesn't exist **")
+            return
 
-        if not args:
-            instances = list(all_instances.values())
-            for instance in instances:
-                print(instance)
-        else:
-            class_name = args[0]
-            if class_name not in storage.classes():
-                print("** class doesn't exist **")
-                return
-
-            class_instances = [str(instance) for key, instance in all_instances.items() if class_name in key]
-            for instance in class_instances:
-                print(instance)
+        class_instances = [str(instance) for key, instance in all_instances.items() if class_name in key]
+        for instance in class_instances:
+            print(instance)
 
     def do_update(self, arg):
         """Update an instance attribute"""
