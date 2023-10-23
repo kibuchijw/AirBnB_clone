@@ -8,6 +8,7 @@
 | 3. Zoning done! | [3-index.html](./3-index.html), [styles/3-common.css](./styles/3-common.css), [styles/3-header.css](./styles/3-header.css), [styles/3-footer.css](./styles/3-footer.css), [images/](./images/) |
 | 4. Search! | [4-index.html](./4-index.html), [styles/4-common.css](./styles/4-common.css), [styles/3-header.css](./styles/3-header.css), [styles/3-footer.css](./styles/3-footer.css), [styles/4-filters.css](./styles/4-filters.css), [images/](./images/) |
 | 5. More filters | [5-index.html](./5-index.html), [styles/4-common.css](./styles/4-common.css), [styles/3-header.css](./styles/3-header.css), [styles/3-footer.css](./styles/3-footer.css), [styles/5-filters.css](./styles/5-filters.css), [images/](./images/) |
+| 6. It's (h)over | [6-index.html](./6-index.html), [styles/4-common.css](./styles/4-common.css), [styles/3-header.css](./styles/3-header.css), [styles/3-footer.css](./styles/3-footer.css), [styles/6-filters.css](./styles/6-filters.css), [images/](./images/) |
 
 # Tasks
 ## 0. Inline styling
@@ -103,3 +104,18 @@
 			* font weight: 400
 			* font size: 14px
 			* text with fake contents
+## 6. It's (h)over
+* An HTML page that displays a header, footer and a filters box with dropdown
+* Layout: (based on `5-index.html`)
+	* Update Locations and Amenities filters to display a contextual dropdown when the mouse is on the filter `div`:
+		* tag `ul`
+		* classname `popover`
+		* inside each `div`
+		* not displayed by default
+		* color #FAFAFA
+		* width same as the `div` filter
+		* border #DDDDDD 1px with border radius 4px
+		* no list display
+		* Location filter has 2 levels of `ul`/`li`:
+			* state -> cities
+			* state name must be displayed in a `h2` tag(font size 16px)
