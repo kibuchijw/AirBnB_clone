@@ -9,6 +9,7 @@
 | 4. Search! | [4-index.html](./4-index.html), [styles/4-common.css](./styles/4-common.css), [styles/3-header.css](./styles/3-header.css), [styles/3-footer.css](./styles/3-footer.css), [styles/4-filters.css](./styles/4-filters.css), [images/](./images/) |
 | 5. More filters | [5-index.html](./5-index.html), [styles/4-common.css](./styles/4-common.css), [styles/3-header.css](./styles/3-header.css), [styles/3-footer.css](./styles/3-footer.css), [styles/5-filters.css](./styles/5-filters.css), [images/](./images/) |
 | 6. It's (h)over | [6-index.html](./6-index.html), [styles/4-common.css](./styles/4-common.css), [styles/3-header.css](./styles/3-header.css), [styles/3-footer.css](./styles/3-footer.css), [styles/6-filters.css](./styles/6-filters.css), [images/](./images/) |
+| 7. Display results | [7-index.html](./7-index.html), [styles/4-common.css](./styles/4-common.css), [styles/3-header.css](./styles/3-header.css), [styles/3-footer.css](./styles/3-footer.css), [styles/6-filters.css](./styles/6-filters.css), [styles/7-places.css](./styles/7-places.css), [images/](./images/) |
 
 # Tasks
 ## 0. Inline styling
@@ -119,3 +120,24 @@
 		* Location filter has 2 levels of `ul`/`li`:
 			* state -> cities
 			* state name must be displayed in a `h2` tag(font size 16px)
+## 7. Display results
+* An HTML page that displays a header, footer and a filters box with dropdown and results
+* Layout: (based on `6-index.html`)
+	* Add Places section:
+		* tag: `section`
+		* classname: `places`
+		* same level as the filters section, inside `.container`
+		* contains a title:
+			* tag: `h1`
+			* text: `Places`
+			* align in the top left
+			* font size: 30px
+		* contains multiple "Places" as listin  (horizontal or vertical) describe by:
+			* tag: `article`
+			* width: 390px
+			* padding and margin 20px
+			* border #FF5A5F 1px with radius 4px
+			* contains the place name:
+				* tag: `h2`
+				* font size: 30px
+				* center horizontally
