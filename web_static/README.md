@@ -7,6 +7,7 @@
 | 2. CSS files | [2-index.html](./2-index.html), [styles/2-common.css](./styles/2-common.css), [styles/2-header.css](./styles/2-header.css), [styles/2-footer.css](./styles/2-footer.css) |
 | 3. Zoning done! | [3-index.html](./3-index.html), [styles/3-common.css](./styles/3-common.css), [styles/3-header.css](./styles/3-header.css), [styles/3-footer.css](./styles/3-footer.css), [images/](./images/) |
 | 4. Search! | [4-index.html](./4-index.html), [styles/4-common.css](./styles/4-common.css), [styles/3-header.css](./styles/3-header.css), [styles/3-footer.css](./styles/3-footer.css), [styles/4-filters.css](./styles/4-filters.css), [images/](./images/) |
+| 5. More filters | [5-index.html](./5-index.html), [styles/4-common.css](./styles/4-common.css), [styles/3-header.css](./styles/3-header.css), [styles/3-footer.css](./styles/3-footer.css), [styles/5-filters.css](./styles/5-filters.css), [images/](./images/) |
 
 # Tasks
 ## 0. Inline styling
@@ -83,3 +84,22 @@
 			* border radius: 4px
 			* center vertically and at 30px of the right border
 			* change opacity to 90% when the mouse is on the button
+## 5. More filters
+* An HTML page that displays a header, footer and a filters box
+* Layout: (based on `4-index.html`)
+	* Locations and Amenities filters:
+		* tag: `div`
+		* classame: `locations` for location tag and `amenities` for the other
+		* inside the section filters(same level as the `button` Search)
+		* height: 100% of the section filters
+		* width: 25% of the section filters
+		* border right #DDDDDD 1px only for the first left filter
+		* contains a title:
+			* tag: `h3`
+			* font weight: 600
+			* text `States` or `Amenities`
+		* contains a subtitle:
+			* tag: `h4`
+			* font weight: 400
+			* font size: 14px
+			* text with fake contents
