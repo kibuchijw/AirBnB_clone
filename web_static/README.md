@@ -184,19 +184,19 @@
 				  	* classname: `max_guest`
 				  	* width: 100px
 				  	* fake text
-				  	* [https://s3.amazonaws.com/intranet-projects-files/holbertonschool-higher-level_programming+/268/icon_group.png](./icon)
+				  	* [icon](./images/icon_group.png)
 				  * Number of bedrooms:
 				  	* tag: `div`
 				  	* classname: `number_rooms`
 				  	* width: 100px
 				  	* fake text
-				  	* [https://s3.amazonaws.com/intranet-projects-files/holbertonschool-higher-level_programming+/268/icon_bed.png](./icon)
+				  	* [icon](./images/icon_bed.png)
 				  * Number of bathrooms
 				  	* tag: `div`
 				  	* classname: `number_bathrooms`
 				  	* width: 100px
 				  	* fake text
-				  	* [https://s3.amazonaws.com/intranet-projects-files/holbertonschool-higher-level_programming+/268/icon_bath.png](./icon)
+				  	* [icon](./images/icon_bath.png)
 		* User section:
 			* tag:`div`
 			* classname: `user`
