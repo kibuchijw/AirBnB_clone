@@ -1,4 +1,21 @@
 # 0x01. AirBnB clone - Web static
+## Learning Objectives
+
+### General
+
+* What is HTML
+* How to create an HTML page
+* What is a markup language
+* What is the DOM
+* What is an element / tag
+* What is an attribute
+* How does the browser load a webpage
+* What is CSS
+* How to add style to an element
+* What is a class
+* What is a selector
+* How to compute CSS Specificity Value
+* What are Box properties in CSS
 
 | Task | File |
 | ---- | ---- |
@@ -10,6 +27,7 @@
 | 5. More filters | [5-index.html](./5-index.html), [styles/4-common.css](./styles/4-common.css), [styles/3-header.css](./styles/3-header.css), [styles/3-footer.css](./styles/3-footer.css), [styles/5-filters.css](./styles/5-filters.css), [images/](./images/) |
 | 6. It's (h)over | [6-index.html](./6-index.html), [styles/4-common.css](./styles/4-common.css), [styles/3-header.css](./styles/3-header.css), [styles/3-footer.css](./styles/3-footer.css), [styles/6-filters.css](./styles/6-filters.css), [images/](./images/) |
 | 7. Display results | [7-index.html](./7-index.html), [styles/4-common.css](./styles/4-common.css), [styles/3-header.css](./styles/3-header.css), [styles/3-footer.css](./styles/3-footer.css), [styles/6-filters.css](./styles/6-filters.css), [styles/7-places.css](./styles/7-places.css), [images/](./images/) |
+| 8. More details | [8-index.html](./8-index.html), [styles/4-common.css](./styles/4-common.css), [styles/3-header.css](./styles/3-header.css), [styles/3-footer.css](./styles/3-footer.css), [styles/6-filters.css](./styles/6-filters.css), [styles/8-places.css](./styles/8-places.css), [images/](./images/) |
 
 # Tasks
 ## 0. Inline styling
@@ -141,3 +159,49 @@
 				* tag: `h2`
 				* font size: 30px
 				* center horizontally
+## 8. More details
+* An HTML page that displays a header, footer, a filter box(dropdown list) and the result of the search.
+* Layout: (based on `7-index.html`)
+	* Add more information to a Place `article`:
+		* Price by night:
+			* tag: `div`
+			* classname: `price_by_night`
+			* same level as the place name
+			* font color: #FF5A5F
+			* border: #FF5A5F 4px rounded
+			* min width: 60px
+			* height: 60px
+			* font size: 30px
+			* align: the top right(with space)
+		* Information section:
+			* tag: `div`
+			* classname: `information`
+			* height: 80px
+			* border: top and bottom #DDDDDD 1px
+			* contains (align vertically):
+				* Number of guests:
+				  	* tag: `div`
+				  	* classname: `max_guest`
+				  	* width: 100px
+				  	* fake text
+				  	* [https://s3.amazonaws.com/intranet-projects-files/holbertonschool-higher-level_programming+/268/icon_group.png](./icon)
+				  * Number of bedrooms:
+				  	* tag: `div`
+				  	* classname: `number_rooms`
+				  	* width: 100px
+				  	* fake text
+				  	* [https://s3.amazonaws.com/intranet-projects-files/holbertonschool-higher-level_programming+/268/icon_bed.png](./icon)
+				  * Number of bathrooms
+				  	* tag: `div`
+				  	* classname: `number_bathrooms`
+				  	* width: 100px
+				  	* fake text
+				  	* [https://s3.amazonaws.com/intranet-projects-files/holbertonschool-higher-level_programming+/268/icon_bath.png](./icon)
+		* User section:
+			* tag:`div`
+			* classname: `user`
+			* text: `Owner: <fake text>`
+			* `Owner` text should be in bold
+		* Description section:
+		    	* tag: `div`
+		    	* classname: `description`
