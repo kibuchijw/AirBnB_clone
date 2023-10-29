@@ -185,13 +185,13 @@
 				  	* width: 100px
 				  	* fake text
 				  	* [icon](./images/icon_group.png)
-				  * Number of bedrooms:
+				* Number of bedrooms:
 				  	* tag: `div`
 				  	* classname: `number_rooms`
 				  	* width: 100px
 				  	* fake text
 				  	* [icon](./images/icon_bed.png)
-				  * Number of bathrooms
+				* Number of bathrooms
 				  	* tag: `div`
 				  	* classname: `number_bathrooms`
 				  	* width: 100px
